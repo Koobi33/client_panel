@@ -13,7 +13,7 @@ class CreateClientsTable extends Migration
      */
     public function up()
     {
-        Schema::create('clients', function (Blueprint $table) {
+        Schema::create('u6371237_dima', function (Blueprint $table) {
             $table->increments('id');
             $table->string('clientName');
             $table->string('lawTypeSelect');
@@ -33,8 +33,8 @@ class CreateClientsTable extends Migration
             $table->boolean('vk')->default(false);
             $table->boolean('inst')->default(false);
             $table->boolean('fb')->default(false);
-            $table->date('created_at');
-            $table->date('updated_at');
+            $table->datetime('created_at');
+            $table->datetime('updated_at');
         });
     }
 
@@ -45,6 +45,6 @@ class CreateClientsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('clients');
+        Schema::dropIfExists('u6371237_dima');
     }
 }

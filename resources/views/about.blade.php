@@ -2,28 +2,28 @@
 
 @section('content')
 
-<div class="container">
+<div class="container" style="margin-top: 2em">
 <form method="post">
     @csrf
     <div class="form-group row">
-    <label for="clientName" class="col-sm-2 col-form-label">Название заведения</label>
+    <label for="clientName" class="col-sm-2 col-form-label" >Название заведения</label>
     <div class="col-sm-10">
-        <input type="text" class="form-control" id="clientName" name="clientName" placeholder="Название заведения">
+        <input type="text" class="form-control" id="clientName" name="clientName" placeholder="Название заведения" required>
     </div>
 </div>
     <div class="form-group row">
         <label for="lawTypeSelect" class="col-sm-2 col-form-label">Тип юр.лица</label>
         <div class="col-sm-10">
     <select class="custom-select" id="lawTypeSelect" name="lawTypeSelect">
-        <option value= 1 selected>ИП</option>
-        <option value= 2 >ООО</option>
+        <option value= ИП selected>ИП</option>
+        <option value= ООО >ООО</option>
     </select>
         </div>
     </div>
     <div class="form-group row">
         <label for="lawName" class="col-sm-2 col-form-label">Название юр.лица</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" id="lawName" name="lawName" placeholder="Название юр.лица">
+            <input type="text" class="form-control" id="lawName" name="lawName" placeholder="Название юр.лица" required>
         </div>
     </div>
     <div class="form-group row">
@@ -35,7 +35,7 @@
     <div class="form-group row">
         <label for="factAddr" class="col-sm-2 col-form-label">Фактический адрес</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" id="factAddr" name="factAddr" placeholder="Фактический адрес">
+            <input type="text" class="form-control" id="factAddr" name="factAddr" placeholder="Фактический адрес" required>
         </div>
     </div>
     <div class="form-group row">
@@ -69,7 +69,7 @@
         </div>
     </div>
     <div class="form-group row">
-        <label for="corrAcc" class="col-sm-2 col-form-label">Кореспондетский счет</label>
+        <label for="corrAcc" class="col-sm-2 col-form-label">Корреспондентский счет</label>
         <div class="col-sm-10">
             <input type="text" class="form-control" id="corrAcc" name="corrAcc" placeholder="Кореспондетский счет">
         </div>
@@ -89,13 +89,13 @@
     <div class="form-group row">
         <label for="phoneNumber" class="col-sm-2 col-form-label">Телефон</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Телефон">
+            <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Телефон" required>
         </div>
     </div>
     <div class="form-group row">
         <label for="email" class="col-sm-2 col-form-label">E-mail</label>
         <div class="col-sm-10">
-            <input type="email" class="form-control" id="email" name="email" placeholder="E-mail">
+            <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required>
         </div>
     </div>
     <div class="form-group row">

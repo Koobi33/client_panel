@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class aboutClient extends Model
 {
-    protected $table = "clients";
+    protected $table = "u6371237_dima";
     protected $primaryKey = "id";
 
     protected $fillable = [
@@ -32,4 +32,5 @@ class aboutClient extends Model
         'created_at',
         'updated_at'
     ];
+
 }
