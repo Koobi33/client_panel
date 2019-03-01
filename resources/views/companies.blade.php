@@ -8,15 +8,15 @@
             <h6 class="border-bottom border-gray pb-2 mb-0">Список компаний</h6>
             @foreach($companies as $company)
             <div class="media text-muted pt-3">
-                <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                <p class="media-body pb-5 mb-0 lh-125 border-bottom border-gray" >
                     <strong class="d-block text-gray-dark" >{{$company->clientName}}</strong>
                     <span> Тел.: {{$company->phoneNumber}}</span> || <span> Добавлен: {{$company->created_at->format('d-m-Y H:i')}}</span>
-                <div class="btn-group" role="group">
+                </p>
+                <div class="btn-group-vertical" role="group" >
                     <a href="{{  route('company', $company->id) }}" class="btn btn-outline-success btn-sm">Просмотр</a>
                     <a href="{{  route('edit', $company->id) }}" class="btn btn-outline-warning btn-sm"> Редактировать</a>
-                    <a href="{{route('delete', $company->id)}}" class="btn btn-outline-danger btn-sm">Удалить</a>
+                    <a  href="{{route('delete', $company->id)}}" class="btn btn-outline-danger btn-sm ">Удалить</a>
                 </div>
-                </p>
             </div>
         @endforeach
 

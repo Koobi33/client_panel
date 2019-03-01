@@ -8,7 +8,7 @@
     <div class="form-group row">
     <label for="clientName" class="col-sm-2 col-form-label" >Название заведения</label>
     <div class="col-sm-10">
-        <input type="text" class="form-control" id="clientName" name="clientName" placeholder="Название заведения" required>
+        <input type="text" class="form-control" id="clientName" name="clientName" placeholder="Название заведения" minlength="3" maxlength="255" required >
     </div>
 </div>
     <div class="form-group row">
@@ -23,7 +23,7 @@
     <div class="form-group row">
         <label for="lawName" class="col-sm-2 col-form-label">Название юр.лица</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" id="lawName" name="lawName" placeholder="Название юр.лица" required>
+            <input type="text" class="form-control" id="lawName" name="lawName" placeholder="Название юр.лица" required minlength="3" maxlength="255">
         </div>
     </div>
     <div class="form-group row">
@@ -35,7 +35,7 @@
     <div class="form-group row">
         <label for="factAddr" class="col-sm-2 col-form-label">Фактический адрес</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" id="factAddr" name="factAddr" placeholder="Фактический адрес" required>
+            <input type="text" class="form-control" id="factAddr" name="factAddr" placeholder="Фактический адрес" required minlength="3" maxlength="255">
         </div>
     </div>
     <div class="form-group row">
@@ -89,7 +89,7 @@
     <div class="form-group row">
         <label for="phoneNumber" class="col-sm-2 col-form-label">Телефон</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Телефон" required>
+            <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Телефон" pattern="\d{1}\d{3}\d{3}\d{2}\d{2}" minlength="11" maxlength="11" required>
         </div>
     </div>
     <div class="form-group row">
@@ -123,7 +123,7 @@
     </div>
     <div class="form-group row">
         <div class="col-sm-10">
-            <button type="submit" name="submit" class="btn btn-primary">Создать</button>
+            <button type="submit" onclick="validate(this.form)" name="submit" class="btn btn-primary">Создать</button>
         </div>
     </div>
 </form>

@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 use App\Entities\aboutClient;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
+use Barryvdh\DomPDF\PDF;
 
 
 class aboutClientController extends Controller
@@ -16,10 +17,12 @@ class aboutClientController extends Controller
         $companies = $objClient->orderBy('created_at', 'desc')->paginate(10);
         return view('companies', ['companies' => $companies]);
     }
+
     public function create()
     {
         return view('about');
     }
+
     public function viewClient($id){
         $objClient = aboutClient::find($id);
         if(!$objClient)
@@ -28,6 +31,7 @@ class aboutClientController extends Controller
         }
         return view('client', ['company' => $objClient]);
     }
+
     public function editClient($id){
         $objClient = aboutClient::find($id);
         if(!$objClient)

@@ -33,6 +33,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/companies/{id}/', 'aboutClientController@viewClient')->where('id', '\d+')->name('company');
     Route::get('/companies/edit/{id}/', 'aboutClientController@editClient')->where('id', '\d+')->name('edit');
     Route::post('/companies/edit/{id}', 'aboutClientController@editRequestClient')->where('id', '\d+');
+
+    Route::get('/companies/convert_pdf/{id}', 'DynamicPDFController@pdf')->where('id', '\d+')->name('convert');
+
     Route::get('/companies/delete/{id}/', 'aboutClientController@deleteClient')->where('id', '\d+')->name('delete');
     Route::get('/crm', 'aboutClientController@create')->name('companies.add');
     Route::post('/crm', 'aboutClientController@store');

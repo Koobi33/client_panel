@@ -2,15 +2,15 @@
 
 @section('content')
     <div class="text-center" style>
-        <form class="form-signin" method="post">
+        <form class="form-signin col-5" method="post">
             @csrf
             <h1 class="h3 mb-3 font-weight-normal">Пожалуйста зарегистрируйтесь</h1>
             <label for="inputEmail" class="sr-only">Email </label>
             <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email" required autofocus>
             <label for="inputPassword" class="sr-only">Пароль</label>
             <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Пароль" required>
-            <label for="inputPassword" class="sr-only">Пароль</label>
-            <input type="password" id="inputPassword" name="password_confirmation" class="form-control" placeholder="Повторите пароль" required>
+            <label for="repeatPassword" class="sr-only">Пароль</label>
+            <input type="password" id="repeatPassword" name="password_confirmation" class="form-control" placeholder="Повторите пароль" required>
             <div class="checkbox mb-3">
                 <label>
                     <input type="checkbox" value="1" name="remember"> Запомнить меня

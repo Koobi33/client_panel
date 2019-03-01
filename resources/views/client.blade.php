@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h1 class="h1" style="text-align: center">Информация о {{$company->clientName}}</h1>
+        <h1  style="text-align: center">Информация о {{$company->clientName}}</h1>
         <table class="table table-borderless" style="margin-top: 2em">
             <tbody>
             @if($company->clientName)
@@ -114,5 +114,6 @@
         </table>
         <a href="{{  route('edit', $company->id) }}" class="btn btn-outline-warning btn-sm"> Редактировать</a>
         <a href="{{  route('delete', $company->id) }}" class="btn btn-outline-danger btn-sm">Удалить</a>
+        <a href="{{ route('convert', $company->id) }}" class="btn btn-outline-info btn-sm">Превратить в PDF</a>
 </div>
 @endsection
